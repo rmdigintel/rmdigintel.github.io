@@ -15,7 +15,7 @@ tg.expand(); //расширяем на все окно
 btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
   // let id = tg.initData.user.id;
   // alert(tg.initDataUnsafe.user.username);
-  tg.sendData("Данные заполнены"); 
+  // tg.sendData("Данные заполнены"); 
   tg.close();
 });
 
