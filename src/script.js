@@ -16,6 +16,7 @@ btn.addEventListener('click', function(){ //вешаем событие на н�
   // let id = tg.initData.user.id;
   // alert(tg.initDataUnsafe.user.username);
   // tg.sendData("Данные заполнены"); 
+  alert(tg.initData);
   tg.close();
 });
 
