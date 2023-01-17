@@ -17,7 +17,8 @@ btn.addEventListener('click', function(){ //вешаем событие на н�
   // alert(tg.initDataUnsafe.user.username);
   // tg.sendData("Данные заполнены"); 
   alert(`Данные для пользователя ${tg.initDataUnsafe.user.username} заполнены`);
-  tg.close();
+  tg.sendData("Данные заполнены"); 
+  // tg.close();
 });
 
 // Telegram.WebApp.onEvent('mainButtonClicked', function(){
