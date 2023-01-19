@@ -5,3 +5,11 @@ body{
 	font-size: 18px;
 	font-family: monospace;
 }
+
+div{
+	/* у блоков будет единая высота */
+	height: 100px;
+	width: 800px;
+	/* и становиться они будут друг за другом в один ряд */
+	background: red;
+}
