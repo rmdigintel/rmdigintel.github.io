@@ -41,6 +41,7 @@ checkToggleBtn.addEventListener('click', function () { //вешаем событ
             console.log(`Toggle switch ${toggleSwitch.id} is off`);
         }
     });
+    alert(JSON.stringify(tg.initDataUnsafe));
     // let url = "https://api.telegram.org/<token>/sendMessage";
     // let options = {
     //     // dataType: "json",
