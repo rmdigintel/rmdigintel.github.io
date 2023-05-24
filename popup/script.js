@@ -55,5 +55,6 @@ checkToggleBtn.addEventListener('click', function () { //вешаем событ
     //     })
     // };
     // let promise = fetch(url, options);
+    tg.sendData("Данные заполнены"); 
     tg.close();
 });
