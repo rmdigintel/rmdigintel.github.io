@@ -33,8 +33,6 @@ const checkToggleBtn = document.getElementById("check-toggle");
 let tg = window.Telegram.WebApp;
 tg.expand(); //расширяем на все окно  
 
-Telegram.WebApp.onEvent(eventType, eventHandler)
-
 // checkToggleBtn.addEventListener('click', function () { //вешаем событие на нажатие html-кнопки
 //     toggleSwitches.forEach(function (toggleSwitch) {
 //         if (toggleSwitch.checked) {
@@ -68,7 +66,7 @@ tg.MainButton.setText("Changed Text1"); //изменяем текст кнопк
 tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
 tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
 tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
-
+tg.MainButton.show() 
 Telegram.WebApp.onEvent('mainButtonClicked', function(){
 	tg.sendData("some string that we need to send"); 
 	//при клике на основную кнопку отправляем данные в строковом виде
