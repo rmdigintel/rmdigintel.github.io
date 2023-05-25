@@ -10,15 +10,15 @@
 const toggleSwitches = document.querySelectorAll('input[type="checkbox"]');
 const checkToggleBtn = document.getElementById("check-toggle");
 
-// // toggleSwitches.forEach(function(toggleSwitch) {
-// //   toggleSwitch.addEventListener("change", function() {
-// //     if (this.checked) {
-// //       console.log(`Toggle switch ${this.id} is on`);
-// //     } else {
-// //       console.log(`Toggle switch ${this.id} is off`);
-// //     }
-// //   });
-// // });
+toggleSwitches.forEach(function(toggleSwitch) {
+  toggleSwitch.addEventListener("change", function() {
+    if (this.checked) {
+      console.log(`Toggle switch ${this.id} is on`);
+    } else {
+      console.log(`Toggle switch ${this.id} is off`);
+    }
+  });
+});
 
 // // checkToggleBtn.addEventListener("click", function () {
 // //     toggleSwitches.forEach(function (toggleSwitch) {
@@ -61,25 +61,11 @@ const checkToggleBtn = document.getElementById("check-toggle");
 // //     tg.close();
 // // });
 
-// tg.MainButton.text = "Changed Text"; //изменяем текст кнопки 
-// tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
-// tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
-// tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
-// tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
-// tg.MainButton.show() 
-// Telegram.WebApp.onEvent('mainButtonClicked', function(){
-// 	tg.sendData("some string that we need to send"); 
-// 	//при клике на основную кнопку отправляем данные в строковом виде
-// });
-
-// Failed to load resource: the server responded with a status of 404 ()
 
 let tg = window.Telegram.WebApp;
 tg.expand(); //расширяем на все окно  
 
 checkToggleBtn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-  // tg.sendData("Данные заполнены"); 
-  alert(JSON.stringify(tg.initDataUnsafe));
   tg.sendData("Данные заполнены"); 
   tg.close();
 });

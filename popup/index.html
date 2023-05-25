@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-<html>
-<head><!DOCTYPE html>
-<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        <title>Document</title>
+    </head>
+
 <body>
     <h2>Пример формы</h2>
     <div class="row">
         <label class="switch">
-            <input type="checkbox" class="toggle-switch" id="parameter1">
+            <input type="checkbox" class="toggle-switch" id="parameter1-toggle">
             <span class="slider round"></span>
         </label>
-        <p>параметр1</p>
+        <div class="parameter" id="parameter1">
+            <h3>параметр1</h3>
+            <div class="radio-input" id="parameter1-radio">
+                <label>
+                    <input type="radio" name="option" value="value1">value1
+                </label>
+                <label>
+                    <input type="radio" name="option" value="value2">value2
+                </label>
+            </div>
+        </div>
+
     </div>
     <div class="row">
         <label class="switch">
-            <input type="checkbox" class="toggle-switch" id="parameter2">
+            <input type="checkbox" class="toggle-switch" id="parameter2-toggle">
             <span class="slider round"></span>
         </label>
         <p>параметр2</p>
@@ -29,4 +40,5 @@
     <button id="check-toggle">Отправить</button>
     <script src="script.js"></script>
 </body>
+
 </html>
