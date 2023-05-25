@@ -3,6 +3,11 @@ const toScoringQuestionsBtn = document.getElementById("to-scoring-question");
 const checkToggleBtn = document.getElementById("check-toggle");
 const addBlockerButton = document.getElementById("add-blocker-btn");
 
+function createBlocker() {
+  ""
+}
+
+
 toggleSwitches.forEach(function(toggleSwitch) {
   toggleSwitch.addEventListener("change", function() {
     const closestRow = this.closest('.row'); // получаем родительский элемент - row 

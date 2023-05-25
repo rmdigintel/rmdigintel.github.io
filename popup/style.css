@@ -35,6 +35,7 @@ body {
 
 h3 {
     text-align: center;
+    padding: 0 30px;
 }
 
 .slider {
@@ -87,7 +88,7 @@ input:checked+.slider:before {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 40px;
+    /* padding: 30px; */
 }
 
 .input {
