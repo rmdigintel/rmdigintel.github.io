@@ -29,9 +29,8 @@ body {
 .row {
     margin: 10px 50px;
     display: flex;
-    gap: 70px;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
 }
 
 h3 {
@@ -84,6 +83,13 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
+.parameter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px;
+}
+
 .input {
     display: none;
 }
@@ -102,4 +108,11 @@ input:checked+.slider:before {
 
 .scoring-questions {
     display: none;
+}
+
+.add-btn {
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    color: #333333;
 }

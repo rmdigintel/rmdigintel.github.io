@@ -1,6 +1,7 @@
 const toggleSwitches = document.querySelectorAll('input[type="checkbox"]');
-const toScoringQuestionsBtn = document.getElementById("to-scroing-question");
+const toScoringQuestionsBtn = document.getElementById("to-scoring-question");
 const checkToggleBtn = document.getElementById("check-toggle");
+const addBlockerButton = document.getElementById("add-blocker-btn");
 
 toggleSwitches.forEach(function(toggleSwitch) {
   toggleSwitch.addEventListener("change", function() {
@@ -16,10 +17,56 @@ toggleSwitches.forEach(function(toggleSwitch) {
   });
 });
 
-toScoringQuestionsBtn.addEventListener("click", function () {
-  const blockers = document.getElementsByClassName("blockers")[0];
-  blockers.style.display = "none";
+
+
+// const addButton = document.getElementById('add-button');
+//     const radioGroup = document.getElementById('radio-group');
+
+//     addButton.addEventListener('click', function() {
+//       const newRadio = document.createElement('input');
+//       newRadio.type = 'radio';
+//       newRadio.name = 'option';
+//       newRadio.value = 'option' + (radioGroup.children.length + 1);
+
+//       const newLabel = document.createElement('label');
+//       newLabel.appendChild(newRadio);
+//       newLabel.appendChild(document.createTextNode(' Option ' + (radioGroup.children.length + 1)));
+
+//       radioGroup.appendChild(newLabel);
+//     });
+
+addBlockerButton.addEventListener("click", function () {
+  const result = prompt("Введите вопрос-блокатор", ["Возраст"]);
+  const newRadio = document.createElement('input');
+  newRadio.type = 'radio';
+  newRadio.name = 'option';
+  newRadio.value = 'option' + (radioGroup.children.length + 1);
 });
+// удаляем ненужные элементы на странице скоринговых вопросов
+toScoringQuestionsBtn.addEventListener("click", function () {
+  const needToHide = toScoringQuestionsBtn.innerText === "Далее" ? "blockers" : "scoring-questions";
+  const needToShow = toScoringQuestionsBtn.innerText === "Далее" ? "scoring-questions" : "blockers";
+  toScoringQuestionsBtn.innerText = toScoringQuestionsBtn.innerText === "Далее" ? "Назад" : "Далее";
+  const hide = document.getElementsByClassName(needToHide);
+  Array.prototype.forEach.call(hide, elem => {
+      elem.style.display = "none";
+    })
+  const show = document.getElementsByClassName(needToShow);
+  Array.prototype.forEach.call(show, elem => {
+    elem.style.display = "block";
+  })
+  // const blockers = document.getElementsByClassName("blockers");
+  // const scoringQuestions = document.getElementsByClassName("scoring-questions");
+  // Array.prototype.forEach.call(blockers, blocker => {
+  //   blocker.style.display = "none";
+  // })
+  
+  // Array.prototype.forEach.call(scoringQuestions, scoringQuestion => {
+  //   scoringQuestion.style.display = "block";
+  // })
+});
+
+
 
 // // checkToggleBtn.addEventListener("click", function () {
 // //     toggleSwitches.forEach(function (toggleSwitch) {
