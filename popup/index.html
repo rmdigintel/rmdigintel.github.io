@@ -1,43 +1,104 @@
 <!DOCTYPE html>
+
 <head>
     <html lang="ru">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
         <title>Document</title>
     </head>
 
 <body>
     <h2>Пример формы</h2>
-    <div class="row">
-        <label class="switch">
-            <input type="checkbox" class="toggle-switch" id="parameter1-toggle">
-            <span class="slider round"></span>
-        </label>
-        <div class="parameter" id="parameter1">
-            <h3>параметр1</h3>
-            <div class="radio-input" id="parameter1-radio">
-                <label>
-                    <input type="radio" name="option" value="value1">value1
+    <form>
+        <div class="blockers">
+            <div class="row">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-switch" id="parameter1-toggle">
+                    <span class="slider round"></span>
                 </label>
-                <label>
-                    <input type="radio" name="option" value="value2">value2
+                <div class="parameter" id="parameter1">
+                    <h3>параметр1</h3>
+                    <div class="input" id="parameter1-radio">
+                        <label>
+                            <input type="radio" name="option" value="value1">value1
+                        </label>
+                        <label>
+                            <input type="radio" name="option" value="value2">value2
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-switch" id="parameter2-toggle">
+                    <span class="slider round"></span>
                 </label>
+                <div class="parameter" id="parameter2">
+                    <h3>параметр2</h3>
+                    <div class="input">
+                        <select name="user_profile_color_1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-switch" id="parameter3-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <div class="parameter" id="parameter3">
+                    <h3>параметр3</h3>
+                    <div class="input" id="parameter3-radio">
+                        <label>
+                            <input type="radio" name="option" value="value1">value1
+                        </label>
+                        <label>
+                            <input type="radio" name="option" value="value2">value2
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-switch" id="parameter4-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <div class="parameter" id="parameter4">
+                    <h3>параметр4</h3>
+                    <div class="input" id="parameter4-radio">
+                        <label>
+                            <input type="radio" name="option" value="value4">value1
+                        </label>
+                        <label>
+                            <input type="radio" name="option" value="value4">value2
+                        </label>
+                    </div>
+                </div>
             </div>
         </div>
-
-    </div>
-    <div class="row">
-        <label class="switch">
-            <input type="checkbox" class="toggle-switch" id="parameter2-toggle">
-            <span class="slider round"></span>
-        </label>
-        <p>параметр2</p>
-    </div>
-    <button id="check-toggle">Отправить</button>
+        <div class="scoring-questions">
+            <div class="scoring-question row">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-switch" id="scoring-question1-toggle">
+                    <span class="slider round"></span>
+                </label>
+                
+            </div>
+        </div>
+    </form>
+    <button id="to-scroing-question" class="btn">Далее</button>
+    <button id="check-toggle" class="btn scoring-questions">Отправить</button>
     <script src="script.js"></script>
 </body>
 

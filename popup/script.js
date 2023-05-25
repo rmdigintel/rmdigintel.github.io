@@ -1,23 +1,24 @@
-// // const toggleSwitch = document.getElementById("toggle-switch");
-// // toggleSwitch.addEventListener("change", function() {
-// //   if (this.checked) {
-// //     console.log("Toggle switch is on");
-// //   } else {
-// //     console.log("Toggle switch is off");
-// //   }
-// // });
-
 const toggleSwitches = document.querySelectorAll('input[type="checkbox"]');
+const toScoringQuestionsBtn = document.getElementById("to-scroing-question");
 const checkToggleBtn = document.getElementById("check-toggle");
 
 toggleSwitches.forEach(function(toggleSwitch) {
   toggleSwitch.addEventListener("change", function() {
+    const closestRow = this.closest('.row'); // получаем родительский элемент - row 
+    const closestInput = closestRow.getElementsByClassName("input")[0];
     if (this.checked) {
+      if (closestInput) closestInput.style.display = 'block';
       console.log(`Toggle switch ${this.id} is on`);
     } else {
+      if (closestInput) closestInput.style.display = 'none';
       console.log(`Toggle switch ${this.id} is off`);
     }
   });
+});
+
+toScoringQuestionsBtn.addEventListener("click", function () {
+  const blockers = document.getElementsByClassName("blockers")[0];
+  blockers.style.display = "none";
 });
 
 // // checkToggleBtn.addEventListener("click", function () {
