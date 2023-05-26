@@ -14,74 +14,25 @@
     </head>
 
 <body>
-    <form>
-        <div class="blockers">
-            <h2>Вопросы блокаторы</h2>
-            <div class="rows">
-                <div class="row">
-                    <label class="switch">
-                        <input type="checkbox" class="toggle-switch" id="parameter1-toggle">
-                        <span class="slider round"></span>
-                    </label>
-                    <div class="parameter" id="parameter1">
-                        <h3>параметр1</h3>
-                        <div class="input" id="parameter1-radio">
-                            <input type="radio" name="option" value="value1">value1
-                            <input type="radio" name="option" value="value2">value2
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <label class="switch">
-                        <input type="checkbox" class="toggle-switch" id="parameter2-toggle">
-                        <span class="slider round"></span>
-                    </label>
-                    <div class="parameter" id="parameter2">
-                        <h3>параметр2</h3>
-                        <div class="input">
-                            <select name="user_profile_color_1">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <label class="switch">
-                        <input type="checkbox" class="toggle-switch" id="parameter3-toggle">
-                        <span class="slider round"></span>
-                    </label>
-                    <div class="parameter" id="parameter3">
-                        <h3>параметр3</h3>
-                        <div class="input" id="parameter3-radio">
-                            <input type="radio" name="option" value="value1">value1
-                            <input type="radio" name="option" value="value2">value2
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <label class="switch">
-                        <input type="checkbox" class="toggle-switch" id="parameter4-toggle">
-                        <span class="slider round"></span>
-                    </label>
-                    <div class="parameter" id="parameter4">
-                        <h3>параметр4</h3>
-                        <div class="input" id="parameter4-radio">
-                            <input type="radio" name="option" value="value4">value1
-                            <input type="radio" name="option" value="value4">value2
-                        </div>
+    <div class="blockers" id="blockers-container">
+        <h2>Вопросы блокаторы</h2>
+        <div class="rows" id="blockers-rows">
+            <div class="row" id="row-example">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <div class="parameter">
+                    <h3>параметр1</h3>
+                    <div class="input">
+                        <input type="radio" name="option" value="value1">value1
+                        <input type="radio" name="option" value="value2">value2
                     </div>
                 </div>
             </div>
-            <button class="add-btn blockers" id="add-blocker-btn">Добавить вопрос</button>
-        </div>
-        <div class="scoring-questions">
-            <h2>Скоринговые вопросы</h2>
-            <div class="scoring-question row">
+            <div class="row">
                 <label class="switch">
-                    <input type="checkbox" class="toggle-switch" id="scoring-question1-toggle">
+                    <input type="checkbox" class="toggle-switch" id="parameter1-toggle">
                     <span class="slider round"></span>
                 </label>
                 <div class="parameter" id="parameter1">
@@ -92,8 +43,68 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-switch" id="parameter2-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <div class="parameter" id="parameter2">
+                    <h3>параметр2</h3>
+                    <div class="input">
+                        <select name="user_profile_color_1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-switch" id="parameter3-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <div class="parameter" id="parameter3">
+                    <h3>параметр3</h3>
+                    <div class="input" id="parameter3-radio">
+                        <input type="radio" name="option" value="value1">value1
+                        <input type="radio" name="option" value="value2">value2
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-switch" id="parameter4-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <div class="parameter" id="parameter4">
+                    <h3>параметр4</h3>
+                    <div class="input" id="parameter4-radio">
+                        <input type="radio" name="option" value="value4">value1
+                        <input type="radio" name="option" value="value4">value2
+                    </div>
+                </div>
+            </div>
         </div>
-    </form>
+        <button id="add-blocker-btn" class="btn">Добавить вопрос</button>
+    </div>
+    <div class="scoring-questions">
+        <h2>Скоринговые вопросы</h2>
+        <div class="scoring-question row">
+            <label class="switch">
+                <input type="checkbox" class="toggle-switch" id="scoring-question1-toggle">
+                <span class="slider round"></span>
+            </label>
+            <div class="scoring-question" id="scoring-question1">
+                <h3>вопрос1</h3>
+                <div class="input" id="scoring-question-radio">
+                    <input type="radio" name="option" value="value1">value1
+                    <input type="radio" name="option" value="value2">value2
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="navigation-buttons">
         <!-- <button class="btn scoring-questions">Назад</button> -->
         <button id="to-scoring-question" class="btn">Далее</button>

@@ -3,11 +3,6 @@ const toScoringQuestionsBtn = document.getElementById("to-scoring-question");
 const checkToggleBtn = document.getElementById("check-toggle");
 const addBlockerButton = document.getElementById("add-blocker-btn");
 
-function createBlocker() {
-  ""
-}
-
-
 toggleSwitches.forEach(function(toggleSwitch) {
   toggleSwitch.addEventListener("change", function() {
     const closestRow = this.closest('.row'); // получаем родительский элемент - row 
@@ -41,12 +36,14 @@ toggleSwitches.forEach(function(toggleSwitch) {
 //     });
 
 addBlockerButton.addEventListener("click", function () {
-  const result = prompt("Введите вопрос-блокатор", ["Возраст"]);
-  const newRadio = document.createElement('input');
-  newRadio.type = 'radio';
-  newRadio.name = 'option';
-  newRadio.value = 'option' + (radioGroup.children.length + 1);
+  // const result = prompt("Введите вопрос-блокатор", ["Возраст"]);
+  const elem = document.getElementById('row-example');
+  const clone = elem.cloneNode(true);
+  clone.style.display = "block";
+  $('#blockers-rows').append(clone);
 });
+
+
 // удаляем ненужные элементы на странице скоринговых вопросов
 toScoringQuestionsBtn.addEventListener("click", function () {
   const needToHide = toScoringQuestionsBtn.innerText === "Далее" ? "blockers" : "scoring-questions";

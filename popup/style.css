@@ -106,14 +106,18 @@ input:checked+.slider:before {
     display: inline-block;
     font-size: 16px;
 }
-
+/* 
 .scoring-questions {
     display: none;
-}
+} */
 
 .add-btn {
     background-color: #fff;
     border: none;
     text-align: center;
     color: #333333;
+}
+
+#row-example{
+    display: none;
 }
