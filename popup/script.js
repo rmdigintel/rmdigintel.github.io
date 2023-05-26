@@ -18,29 +18,18 @@ toggleSwitches.forEach(function(toggleSwitch) {
 });
 
 
-
-// const addButton = document.getElementById('add-button');
-//     const radioGroup = document.getElementById('radio-group');
-
-//     addButton.addEventListener('click', function() {
-//       const newRadio = document.createElement('input');
-//       newRadio.type = 'radio';
-//       newRadio.name = 'option';
-//       newRadio.value = 'option' + (radioGroup.children.length + 1);
-
-//       const newLabel = document.createElement('label');
-//       newLabel.appendChild(newRadio);
-//       newLabel.appendChild(document.createTextNode(' Option ' + (radioGroup.children.length + 1)));
-
-//       radioGroup.appendChild(newLabel);
-//     });
-
 addBlockerButton.addEventListener("click", function () {
-  // const result = prompt("Введите вопрос-блокатор", ["Возраст"]);
-  const elem = document.getElementById('row-example');
-  const clone = elem.cloneNode(true);
-  clone.style.display = "block";
-  $('#blockers-rows').append(clone);
+  const result = prompt("Введите вопрос-блокатор", ["вопрос"]);
+  if (result && result !== "вопрос") {
+    const elem = document.getElementById('row-example');
+    const clone = elem.cloneNode(true);
+    clone.removeAttribute('id');
+    clone.querySelector('h3').textContent = result;
+    clone.querySelector('input').setAttribute("id", `${result}-toggle`);
+    clone.querySelector(".parameter").setAttribute("id", `parameter-${result}`);
+    clone.querySelector(".input").setAttribute("id", `parameter-${result}-radio`);
+    $('#blockers-rows').append(clone);
+  }
 });
 
 
