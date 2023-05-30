@@ -15,21 +15,8 @@
 
 <body>
     <div class="blockers questions" id="blockers-container">
-        <h2>Вопросы блокаторы</h2>
+        <h2>Выберите вопросы-блокаторы</h2>
         <div class="rows" id="blockers-rows">
-            <div class="row" id="row-example">
-                <label class="switch">
-                    <input type="checkbox" class="toggle-switch">
-                    <span class="slider round"></span>
-                </label>
-                <div class="parameter">
-                    <h3>параметр1</h3>
-                    <div class="input">
-                        <input type="radio" name="option" value="value1">value1
-                        <input type="radio" name="option" value="value2">value2
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <label class="switch">
                     <input type="checkbox" class="toggle-switch" id="parameter1-toggle">
@@ -87,28 +74,93 @@
                 </div>
             </div>
         </div>
-        <button id="add-blocker-btn" class="add-btn">Добавить вопрос</button>
     </div>
-    <div class="scoring-questions">
-        <h2>Скоринговые вопросы</h2>
+    <div class="scoring questions">
+        <h2>Выберите вопросы для скоринга</h2>
         <div class="scoring-question row">
             <label class="switch">
                 <input type="checkbox" class="toggle-switch" id="scoring-question1-toggle">
                 <span class="slider round"></span>
             </label>
             <div class="scoring-question" id="scoring-question1">
-                <h3>вопрос1</h3>
-                <div class="input" id="scoring-question-radio">
+                <h3>скоринг вопрос1</h3>
+                <!-- <div class="input" id="scoring-question-radio">
+                    <input type="radio" name="option" value="none">не учитывать
+                    <input type="radio" name="option" value="0">0
+                    <input type="radio" name="option" value="1">1
+                    <input type="radio" name="option" value="0">2
+                    <input type="radio" name="option" value="1">3
+
+                </div> -->
+                <div class="input need-score">
+                    <label class="switch">
+                        <input type="checkbox" class="toggle-switch" id="need-score1-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <h4>Баллы за ответ</h4>
+                    <div class="score-parameters input">
+                        <h5>да</h5>
+                        <h5>нет</h5>
+                    </div>
+                </div>
+                <!-- <div class="range-wrap input">
+                    <div class="range-slider">
+                        <div class="label-range">от 1 до 10 с шагом 1</div>
+                        <input id="range1" type="range" name="range1" min="0" max="3" step="1" value="0" />
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="open questions">
+        <h2>Выберите открытые вопросы</h2>
+        <div class="rows" id="open-rows">
+            <div class="row" id="row-example">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <div class="open-question">
+                    <h3>вопрос</h3>
+                </div>
+            </div>
+            <div class="open-question row">
+                <label class="switch">
+                    <input type="checkbox" class="toggle-switch" id="open-question1-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <div class="open-question" id="open-question1">
+                    <h3>открытый вопрос1</h3>
+                    <!-- <div class="input" id="open-question-radio">
+                        <input type="radio" name="option" value="value1">value1
+                        <input type="radio" name="option" value="value2">value2
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <button id="add-open-btn" class="add-btn">Добавить вопрос</button>
+    </div>
+    <div class="threshold questions">
+        <h2>Порог</h2>
+        <div class="threshold-question row">
+            <label class="switch">
+                <input type="checkbox" class="toggle-switch" id="threshold-question1-toggle">
+                <span class="slider round"></span>
+            </label>
+            <div class="threshold-question" id="threshold-question1">
+                <h3>порог</h3>
+                <div class="input" id="open-question-radio">
                     <input type="radio" name="option" value="value1">value1
                     <input type="radio" name="option" value="value2">value2
                 </div>
             </div>
         </div>
     </div>
-    <div class="navigation-buttons">
+    <!-- <div class="navigation-buttons">
         <button id="to-scoring-question" class="btn">Далее</button>
-    </div>
-    <button id="check-toggle" class="btn scoring-questions">Отправить</button>
+    </div> -->
+    <button id="check-toggle" class="btn check-qurstion">Показать список</button>
+    <button id="start-toggle" class="btn scoring-questions">Запустить</button>
     <script src="script.js"></script>
 </body>
 
